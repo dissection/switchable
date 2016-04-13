@@ -1,0 +1,2 @@
+# switchable
+jQuery.switchable document
