@@ -1,0 +1,30 @@
+{
+  "name": "switchable",
+  "version": "1.0.0",
+  "description": "jQuery.switchable document",
+  "main": "jquery.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dissection/switchable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dissection/switchable/issues"
+  },
+  "homepage": "https://github.com/dissection/switchable#readme",
+  "devDependencies": {
+    "webpack": "^1.12.15",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "file-loader": "^0.8.5"
+  }
+}

@@ -1,0 +1,481 @@
+body{
+    padding: 10px;
+}
+.red{
+
+    background-color: #8a0000;
+}
+.blue{
+    background-color: #4898d5;
+}
+.orange{
+    background-color: orange;
+}
+.green{
+    background-color: green;
+}
+/* jquery.v.slider  dependencies .css */
+/*----------------focus---------------------*/
+.focus-demo-01{
+
+    height: 150px;
+}
+
+.focus-demo-01 .focus-main{
+    position: relative;
+
+}
+
+.focus-demo-01 .focus-main li.focus-panel{
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 150px;
+    color:#fff;
+    text-align: center;
+    line-height: 150px;
+    font-size: 60px;
+
+}
+
+.focus-demo-01 .focus-extra{
+    position: relative;
+    width: 970px;
+    height: 150px;
+    margin: 0 auto;
+}
+.focus-demo-01 .focus-nav{
+    top:120px;
+    width: 530px;
+    height: 0;
+    line-height: 0;
+    left: 210px;
+    text-align: center;
+    position: absolute;
+    z-index: 4;
+}
+.focus-demo-01 .focus-nav li {
+
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.focus-demo-01 .focus-nav li.focus-active{
+    background: #b61b1f;
+    color: #fff;
+}
+
+
+.focus-page a {
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: simsun;
+}
+
+.focus-page a.focus-prev {
+    left: 0;
+    z-index: 4;
+}
+.focus-page a.focus-next {
+    right: 0;
+    z-index: 4;
+}
+
+/*----------------slider---------------------*/
+/*----------------1---------------------*/
+.slider-demo-01{
+    width: 670px;
+    height: 150px;
+    /*margin: 0 auto;*/
+    overflow: hidden;
+
+}
+
+.slider-demo-01 .slider-main{
+    position: relative;
+}
+
+.slider-demo-01 .slider-main li.slider-panel{
+    width: 670px;
+    z-index: 0;
+    height: 150px;
+    color:#fff;
+    text-align: center;
+    line-height:150px;
+    font-size: 60px;
+}
+
+.slider-demo-01 .slider-extra{
+    position: relative;
+    width: 670px;
+    height: 150px;
+    margin: 0 auto;
+}
+.slider-demo-01 .slider-nav{
+    top:120px;
+    width: 130px;
+    height: 0;
+    line-height: 0;
+    left:280px;
+    text-align: center;
+    position: absolute;
+    z-index: 4;
+}
+.slider-demo-01 .slider-nav li {
+
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+
+
+}
+
+.slider-demo-01 .slider-nav li.slider-active{
+    background: #b61b1f;
+    color: #fff;
+}
+
+
+.slider-demo-01 .slider-page a {
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: simsun;
+}
+
+.slider-demo-01 .slider-page a.slider-prev {
+    left: 0;
+    z-index: 4;
+}
+.slider-demo-01 .slider-page a.slider-next {
+    right: 0;
+    z-index: 4;
+}
+
+
+
+/*----------------2---------------------*/
+.slider-demo-02{
+    width: 170px;
+    height: 150px;
+    overflow: hidden;
+
+}
+
+.slider-demo-02 .slider-main{
+    position: relative;
+}
+
+.slider-demo-02 .slider-main li.slider-panel{
+    width: 170px;
+    z-index: 0;
+    height: 150px;
+    color:#fff;
+    text-align: center;
+    line-height:150px;
+    font-size: 60px;
+}
+
+.slider-demo-02 .slider-extra{
+    position: relative;
+    width: 170px;
+    height: 150px;
+    margin: 0 auto;
+}
+.slider-demo-02 .slider-nav{
+    top:120px;
+    width: 130px;
+    height: 0;
+    line-height: 0;
+    left:22px;
+    text-align: center;
+    position: absolute;
+    z-index: 4;
+}
+.slider-demo-02 .slider-nav li {
+
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+
+
+}
+
+.slider-demo-02 .slider-nav li.slider-active{
+    background: #b61b1f;
+    color: #fff;
+}
+
+
+.slider-demo-02 .slider-page a {
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: simsun;
+}
+
+.slider-demo-02 .slider-page a.slider-prev {
+    left: 0;
+    z-index: 4;
+}
+.slider-demo-02 .slider-page a.slider-next {
+    right: 0;
+    z-index: 4;
+}
+/*----------------3---------------------*/
+
+.slider-demo-03{
+    width: 680px;
+    height: 150px;
+    overflow: hidden;
+
+}
+
+.slider-demo-03 .slider-main{
+    position: relative;
+}
+
+.slider-demo-03 .slider-main li.slider-panel{
+    width: 170px;
+    z-index: 0;
+    height: 150px;
+    color:#fff;
+    text-align: center;
+    line-height: 150px;
+    font-size: 60px;
+
+}
+
+.slider-demo-03 .slider-extra{
+    position: relative;
+    width: 680px;
+    height: 150px;
+    margin: 0 auto;
+}
+.slider-demo-03 .slider-nav{
+    top:120px;
+    width: 150px;
+    height: 0;
+    line-height: 0;
+    left:275px;
+    text-align: center;
+    position: absolute;
+    z-index: 4;
+}
+.slider-demo-03 .slider-nav li {
+
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+
+
+}
+
+.slider-demo-03 .slider-nav li.slider-active{
+    background: #b61b1f;
+    color: #fff;
+}
+
+
+.slider-demo-03  .slider-page a {
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: simsun;
+}
+
+.slider-demo-03 .slider-page a.slider-prev {
+    left: 0;
+    z-index: 4;
+}
+.slider-demo-03 .slider-page a.slider-next {
+    right: 0;
+    z-index: 4;
+}
+
+/*----------------tab---------------------*/
+/*----------------1---------------------*/
+.tab-demo-01{
+    width: 170px;
+}
+
+.tab-demo-01 .tab-main{
+    position: relative;
+    width: 170px;
+    height: 170px;
+}
+
+.tab-demo-01 .tab-nav{
+
+}
+.tab-demo-01 .tab-nav .tab-item{
+    width: 40px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+}
+.tab-demo-01 .tab-main {
+
+}
+.tab-demo-01 .tab-main .tab-panel{
+    width: 170px;
+    height: 170px;
+    color:#fff;
+    text-align: center;
+    line-height: 170px;
+    font-size: 60px;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+}
+.tab-demo-01 .tab-main .tab-panel iframe{
+    width: 170px;
+    height: 170px;
+    color:#fff;
+    text-align: center;
+    line-height: 170px;
+    font-size: 60px;
+
+}
+.tab-demo-01 .tab-active{
+    background-color: #2D93CA;
+    color: #fff;
+}
+.tab-demo-01 .tab-arrow{
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    left: 0;
+    top:30px;
+    background: #666666;
+}
+/*----------------2---------------------*/
+.tab-demo-02{
+    width: 170px;
+}
+
+.tab-demo-02 .tab-main{
+    position: relative;
+    width: 170px;
+    height: 170px;
+}
+
+.tab-demo-02 .tab-nav{
+
+}
+.tab-demo-02 .tab-nav .tab-item{
+    width: 40px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+}
+.tab-demo-02 .tab-main {
+
+}
+.tab-demo-02 .tab-main .tab-panel{
+    width: 170px;
+    height: 170px;
+    color:#fff;
+    text-align: center;
+    line-height: 170px;
+    font-size: 60px;
+    position: absolute;
+    display: none;
+    left: 0;
+    top:0;
+}
+
+.tab-demo-02 .tab-active{
+    background-color: #2D93CA;
+    color: #fff;
+}
+.tab-demo-02 .tab-arrow{
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    left: 0;
+    top:37px;
+    background: #d10b00;
+}

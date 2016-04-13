@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../base.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <script src="../jquery.js"></script>
+    <script src="../jQuery.easing.js"></script>
+    <script src="../jQuery.switchable.js"></script>
+</head>
+<body>
+<div class="tit mb20">
+    <h3>焦点图</h3>
+</div>
+<div class="focus-demo-01 ">
+    <ul class="focus-main">
+        <li class="focus-panel red">1</li>
+        <li class="focus-panel blue">2</li>
+        <li class="focus-panel orange">3</li>
+        <li class="focus-panel green">4</li>
+    </ul>
+    <div class="focus-extra">
+        <ul class="focus-nav">
+            <li class="focus-item">1</li>
+            <li class="focus-item">2</li>
+            <li class="focus-item">3</li>
+            <li class="focus-item">4</li>
+        </ul>
+        <div class="focus-page"><a href="javascript:void(0)" class="focus-prev">&lt;</a><a href="javascript:void(0)" class="focus-next">&gt;</a></div>
+    </div>
+</div>
+<script>
+    $(".focus-demo-01").switchable({
+        type:"focus",
+        //isAutoPlay:!0,
+        contentClass:"focus-main",
+        mainClass:"focus-panel",
+        bodyExtra:"focus-extra",
+        navItem:"focus-item",
+        prevClass:"focus-prev",
+        nextClass:"focus-next",
+        navSelectedClass:"focus-active",
+        contentPage:"focus-page"
+    });
+
+</script>
+
+<div class="tit mb20 mt20">
+    <h3>轮播图</h3>
+</div>
+<div class="slider-demo-01 mb20" >
+    <div class="slider-wrap">
+        <ul class="slider-main">
+            <li class="slider-panel red">1</li>
+            <li class="slider-panel blue">2</li>
+            <li class="slider-panel orange">3</li>
+            <li class="slider-panel green">4</li>
+        </ul>
+    </div>
+    <div class="slider-extra">
+        <ul class="slider-nav">
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+        </ul>
+        <div class="slider-page">
+            <a href="javascript:void(0)" class="slider-prev">&lt;</a>
+            <a href="javascript:void(0)"  class="slider-next">&gt;</a>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(".slider-demo-01").switchable({
+        type:"slider",
+        isAutoPlay:!0,
+        seamlessLoop:!0,
+        contentClass:"slider-main",
+        mainClass:"slider-panel",
+        navItem:"slider-item",
+        prevClass:"slider-prev",
+        nextClass:"slider-next",
+        navSelectedClass:"slider-active",
+        stayTime: 1e3
+
+    })
+</script>
+<div class="slider-demo-02 mb20 " >
+    <div class="slider-wrap">
+        <ul class="slider-main">
+            <li class="slider-panel red">1</li>
+            <li class="slider-panel blue">2</li>
+            <li class="slider-panel orange">3</li>
+            <li class="slider-panel green">4</li>
+        </ul>
+    </div>
+    <div class="slider-extra">
+        <ul class="slider-nav">
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+        </ul>
+        <div class="slider-page">
+            <a href="javascript:void(0)" class="slider-prev">&lt;</a>
+            <a href="javascript:void(0)"  class="slider-next">&gt;</a>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(".slider-demo-02").switchable({
+        type:"slider",
+        direction:"top",
+        isAutoPlay:!0,
+        seamlessLoop:!0,
+        contentClass:"slider-main",
+        mainClass:"slider-panel",
+        navItem:"slider-item",
+        prevClass:"slider-prev",
+        nextClass:"slider-next",
+        navSelectedClass:"slider-active",
+        stayTime: 1e3
+
+    })
+</script>
+<div class="slider-demo-03 mb20" >
+    <div class="slider-wrap">
+        <ul class="slider-main">
+            <li class="slider-panel red">1</li>
+            <li class="slider-panel blue">2</li>
+            <li class="slider-panel orange">3</li>
+
+            <li class="slider-panel green">4</li>
+            <li class="slider-panel red">5</li>
+            <li class="slider-panel blue">6</li>
+
+            <li class="slider-panel orange">7</li>
+            <li class="slider-panel green">8</li>
+            <li class="slider-panel red">9</li>
+            <li class="slider-panel blue">10</li>
+            <li class="slider-panel orange">11</li>
+            <li class="slider-panel green">12</li>
+        </ul>
+    </div>
+    <div class="slider-extra">
+
+        <div class="slider-page">
+            <a href="javascript:void(0)" class="slider-prev">&lt;</a>
+            <a href="javascript:void(0)"  class="slider-next">&gt;</a>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(".slider-demo-03").switchable({
+        type:"slider",
+        isAutoPlay:!0,
+        seamlessLoop:!0,
+        contentClass:"slider-main",
+        mainClass:"slider-panel",
+        prevClass:"slider-prev",
+        nextClass:"slider-next",
+        stayTime: 1e3,
+        visible:4
+    })
+</script>
+
+<div class="tit mb20 mt20">
+    <h3>选项卡</h3>
+</div>
+<div class="tab-demo-01 mb20">
+    <div class="tab-extra">
+        <ul class="tab-nav clearfix">
+            <li class="tab-item">1</li>
+            <li class="tab-item" data-iframe = "iframe/tab_iframe_02.html" >2</li>
+            <li class="tab-item" data-iframe = "iframe/tab_iframe_03.html" >3</li>
+            <li class="tab-item" data-iframe = "iframe/tab_iframe_04.html" >4</li>
+
+        </ul>
+    </div>
+
+    <div class="tab-main">
+        <div class="tab-panel red">1</div>
+        <div class="tab-panel blue">2</div>
+        <div class="tab-panel orange">3</div>
+        <div class="tab-panel green">4</div>
+    </div>
+</div>
+<script>
+    $(".tab-demo-01").switchable({
+        type:"tab",
+        defaultPanel:0,
+        isAutoPlay:!0,
+        event:"click",
+        counter:!1, // 索引 计数器 [ false]
+        contentClass:"tab-main",
+        mainClass:"tab-panel",
+        navItem:"tab-item",
+        navSelectedClass:"tab-active",
+        contentPage:"tab-page",
+        stayTime: 1e3,
+        delay:0
+    })
+</script>
+<div class="tab-demo-02 ">
+    <div class="tab-extra">
+        <ul class="tab-nav clearfix">
+            <li class="tab-item">1</li>
+            <li class="tab-item">2</li>
+            <li class="tab-item">3</li>
+            <li class="tab-item">4</li>
+        </ul>
+    </div>
+
+    <div class="tab-main">
+        <div class="tab-panel red">1</div>
+        <div class="tab-panel blue">2</div>
+        <div class="tab-panel orange">3</div>
+        <div class="tab-panel green">4</div>
+    </div>
+</div>
+<script>
+    $(".tab-demo-02").switchable({
+        type:"tab",
+        defaultPanel:0,
+//        event:"click",
+        contentClass:"tab-main",
+        mainClass:"tab-panel",
+        navItem:"tab-item",
+        navSelectedClass:"tab-active",
+        contentPage:"tab-page",
+        hasArrow:!0,
+        arrowClass:"tab-arrow",
+        delay:0,
+        //isAutoPlay:!0
+    });
+</script>
+</body>
+</html>
