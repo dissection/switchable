@@ -23,7 +23,11 @@ options
 **navSelectedClass** [`string`]  
     导航选择的元素类：  
      [`default`] "ui-switchable-selected"
-     
+  
+**imgscrollClass** [`string`]  
+    [`type:imgscroll`] 改变 src 的 img 元素  
+      [`default`] "ui-switchable-imgscroll-img"
+
 **prevClass** [`string`]  
     上一页：  
  [`default`] "ui-switchable-prev"
@@ -39,7 +43,8 @@ options
 **arrowClass** [`string`]  
     跟随条的class
     [`default`] "ui-switchable-arrow"
-    
+ 
+ 
 ### 类型参数：  
 **contentPageIsConceal**  [`Boolean`]  
       判断是否是移入显示 移出消失：  
@@ -127,7 +132,11 @@ options
 **navIframe**  [`string`]  
     iframe 的 路径 属性 ，写在 navitem 元素上  
     [`default`] "data-iframe"
-      
+
+**imgscrollDataSrc**  
+     [`type:imgscroll`] 获取图的路径的 data参数名  
+    [`default`] "data-src"
+    
 ### 回调函数：  
 **callback** [`function`]  
     每次执行完切换 回调函数  
@@ -150,4 +159,5 @@ options
         
 ### 1.0.0
 [`tab`] [`focus`] [`slider`] 
-
+### 1.1.0
+[`tab`] [`focus`] [`slider`] [`imgscroll`]

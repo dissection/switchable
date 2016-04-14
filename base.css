@@ -262,7 +262,9 @@ iframe{
 .tit{
   height: 30px;
   background-color: #1e0a2f;
+  padding-left: 10px;
 }
 .tit h3{
   line-height: 30px;
+  color: #fff;
 }

@@ -479,3 +479,72 @@ body{
     top:37px;
     background: #d10b00;
 }
+/*----------------imgscroll---------------------*/
+
+.imgscroll-demo-01{
+    width: 220px;
+    overflow: hidden;
+}
+
+.imgscroll-demo-01 .image-vessel{
+    width: 220px;
+    height: 200px;
+    overflow: hidden;
+}
+.imgscroll-demo-01 .image-vessel img{
+    display: block;
+    width: 220px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imgscroll-demo-01 .imgscroll-panel-body{
+    width: 200px;
+    height:77px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.imgscroll-demo-01 .imgscroll-panel-body li{
+    display: block;
+    float: left;
+    width: 50px;
+
+}
+.imgscroll-demo-01 .imgscroll-panel-body li img{
+    display: block;
+    width: 46px;
+    height: 73px;
+    padding: 2px;
+}
+.imgscroll-demo-01 .imgscroll-panel-body li.imgscroll-active img{
+    border: 2px #fa4253 solid;
+    padding: 0;
+}
+
+.imgscroll-body{
+    position: relative;
+}
+
+.imgscroll-prev , .imgscroll-next{
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: block;
+    width: 10px;
+    height: 62px;
+    line-height: 62px;
+    background: gray;
+    background: rgba(0,0,0,.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: simsun;
+}
+.imgscroll-next{
+    right: 0;
+}

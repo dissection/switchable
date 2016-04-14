@@ -8,6 +8,7 @@
     <script src="../jquery.js"></script>
     <script src="../jQuery.easing.js"></script>
     <script src="../src/switchable.min.js"></script>
+    <!--<script src="../jQuery.switchable.js"></script>-->
 </head>
 <body>
 <div class="tit mb20">
@@ -75,8 +76,8 @@
 <script>
     $(".slider-demo-01").switchable({
         type:"slider",
-        isAutoPlay:!0,
-        seamlessLoop:!0,
+//        isAutoPlay:!0,
+//        seamlessLoop:!0,
         contentClass:"slider-main",
         mainClass:"slider-panel",
         navItem:"slider-item",
@@ -114,7 +115,7 @@
     $(".slider-demo-02").switchable({
         type:"slider",
         direction:"top",
-        isAutoPlay:!0,
+//        isAutoPlay:!0,
         seamlessLoop:!0,
         contentClass:"slider-main",
         mainClass:"slider-panel",
@@ -157,7 +158,7 @@
 <script>
     $(".slider-demo-03").switchable({
         type:"slider",
-        isAutoPlay:!0,
+//        isAutoPlay:!0,
         seamlessLoop:!0,
         contentClass:"slider-main",
         mainClass:"slider-panel",
@@ -193,7 +194,7 @@
     $(".tab-demo-01").switchable({
         type:"tab",
         defaultPanel:0,
-        isAutoPlay:!0,
+//        isAutoPlay:!0,
         event:"click",
         counter:!1, // 索引 计数器 [ false]
         contentClass:"tab-main",
@@ -235,6 +236,47 @@
         hasArrow:!0,
         arrowClass:"tab-arrow",
         delay:0,
+        //isAutoPlay:!0
+    });
+</script>
+
+<div class="tit mb20 mt20">
+    <h3>图片卷轴</h3>
+</div>
+<div class="imgscroll-demo-01">
+    <div class="image-vessel">
+        <img class="imgscroll-img">
+    </div>
+    <div class="imgscroll-body">
+        <a href="javascript:void(0)" class="imgscroll-prev">&lt;</a>
+        <a href="javascript:void(0)" class="imgscroll-next">&gt;</a>
+        <div class="imgscroll-panel-body">
+            <ul class="imgscroll-main">
+                <li class="imgscroll-panel" ><img class="imgscroll-item"  data-src="images/0ac8e6d19077828a03788d3e8daa8b51184de024150a2-kQ3iOL_fw658.jpg" src="images/0ac8e6d19077828a03788d3e8daa8b51184de024150a2-kQ3iOL_fw658.jpg"></li>
+                <li class="imgscroll-panel"><img class="imgscroll-item" data-src="images/1a484b1a559c35998546a4d3f811cdd7229bdfa41cf43-VQ8ONu_fw658.jpg" src="images/1a484b1a559c35998546a4d3f811cdd7229bdfa41cf43-VQ8ONu_fw658.jpg"></li>
+                <li class="imgscroll-panel"><img class="imgscroll-item" data-src="images/1362ae48350281500243b6272bc31af606dc55272eb55-ctdQja_fw658.jpg" src="images/1362ae48350281500243b6272bc31af606dc55272eb55-ctdQja_fw658.jpg"></li>
+                <li class="imgscroll-panel"><img class="imgscroll-item" data-src="images/38811f5e81578ce1cd5ea175f6a0913ec385ef6fc107-R4FKfK_fw658.jpg" src="images/38811f5e81578ce1cd5ea175f6a0913ec385ef6fc107-R4FKfK_fw658.jpg"></li>
+                <li class="imgscroll-panel"><img class="imgscroll-item" data-src="images/af57665067f273e40e1f59db96804a479da563ef1f7a3-FotKak_fw658.jpg" src="images/af57665067f273e40e1f59db96804a479da563ef1f7a3-FotKak_fw658.jpg"></li>
+                <li class="imgscroll-panel"><img class="imgscroll-item" data-src="images/e27dc3ae1e1f969efe0e684f92249767670ce73615087-scN5jQ_fw658.jpg" src="images/e27dc3ae1e1f969efe0e684f92249767670ce73615087-scN5jQ_fw658.jpg"></li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    $(".imgscroll-demo-01").switchable({
+        type:"imgscroll",
+        bodyClass:"image-vessel",
+        contentClass:"imgscroll-main",
+        mainClass:"imgscroll-panel",
+        mainSelectedClass:"imgscroll-active",
+        contentPage:"tab-page",
+        imgscrollClass:"imgscroll-img",
+        imgscrollItemClass:"imgscroll-item",
+        prevClass:"imgscroll-prev",
+        nextClass:"imgscroll-next",
+        visible:4
         //isAutoPlay:!0
     });
 </script>

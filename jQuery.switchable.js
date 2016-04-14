@@ -79,7 +79,7 @@
         _initState && ( _this.autoPlay(),
             _this.eventBind());
     };
-    Switchable.VERSION = '1.0.0';
+    Switchable.VERSION = '1.1.0';
     Switchable.DEFAULTS = {
         type: "tab",//类型
         direction: "left",   //和slider 相关的属性 "left" ,"top"
@@ -94,6 +94,10 @@
         nextClass: "ui-switchable-next",  // 下一页
         contentPage: "ui-switchable-page", //箭头包裹       _this.el.append($navClass);
         contentPageIsConceal:!1,
+
+        imgscrollClass: "ui-switchable-imgscroll-img", //替换 url 的 img
+        imgscrollItemClass: "ui-switchable-imgscroll-item", // 当前 img scroll Item Class
+        imgscrollDataSrc:"data-src",
         //bodyExtra: false, //"ui-switchable-extra"
         isAutoPlay: !1, //是否自动播放
         mouseenterStopPlay: !0, //鼠标进入停滞播放
@@ -183,7 +187,8 @@
     Switchable.prototype.switchMainTo = function (i) {
         var _this = this, _op = _this.options;
 
-        if(_this.iframefnc(i),(_this.main.removeClass(_op.mainSelectedClass),
+        if(_this.iframefnc(i),
+            "imgscroll" != _op.type && (_this.main.removeClass(_op.mainSelectedClass),
                 _this.main.eq(i).addClass(_op.mainSelectedClass)),
             _this.isInit || _this.last != i){
 
@@ -217,10 +222,11 @@
             case "slider":
                 _this.slider(i);
                 break;
-            /*            case "carousel":
-             _this.carousel(a);
-             break;*/
+            case "imgscroll":
+                _this.imgscroll(i);
+                break;
             default:
+                $.error("\u9009\u62e9\u7c7b\u578b\u6709\u8bef");
             //选择类型有误
             //console.log("\u9009\u62e9\u7c7b\u578b\u6709\u8bef");
         }
@@ -277,8 +283,8 @@
                 zIndex: 1,
                 opacity: 1
             }),
-            _op.isPlayLock = !1) : (setTimeout(function () {
-                _op.isPlayLock = !1
+            _this.isPlayLock = !1) : (setTimeout(function () {
+                _this.isPlayLock = !1
             }
             , _op.speed),
             _this.main.eq(_this.last).css({
@@ -326,8 +332,8 @@
                 position: "absolute"
             }),
             _this.isInit = !1,
-            _op.isPlayLock = !1) : (setTimeout(function () {
-                _op.isPlayLock = !1
+            _this.isPlayLock = !1) : (setTimeout(function () {
+                _this.isPlayLock = !1
             }
             , _op.speed),
             "left" == _op.direction ? $content.stop(!0).animate({
@@ -337,7 +343,47 @@
             }, _op.speed, _op.easing))
     };
     Switchable.prototype.imgscroll = function (i) {
+        console.log(i)
+        var _this = this;
+        var _op = _this.options;
+        var _mainWidth = _this.mainWidth;
+        var $imgscrollClass = _this.el.find("." + _op.imgscrollClass);
+        console.log(_this.isInit)
+        if (_this.isInit) {
+                _this.content.css({
+                    position: "absolute",
+                    width: _mainWidth * _this.len
+                }),
+                _this.main.css({
+                    "float": "left"
+                });
+            var _mainSelectedClass = _op.mainSelectedClass;
+            if (_this.main.eq(0).addClass(_mainSelectedClass),
+                    !$imgscrollClass.attr("src")) {
+                var _initUrl = _this.el.find("." + _op.imgscrollItemClass).eq(0).attr(_op.imgscrollDataSrc);
+                $imgscrollClass.attr("src", _initUrl)
+            }
 
+            _this.main.bind(_op.event, function(){
+                var $this = $(this);
+                var _url = $this.find("." + _op.imgscrollItemClass).attr(_op.imgscrollDataSrc);
+                _this.main.removeClass(_mainSelectedClass),
+                    $this.addClass(_mainSelectedClass),
+                    $imgscrollClass.attr("src", _url)
+            }),
+                _this.isInit = !1,
+                _this.isPlayLock = !1
+        } else {
+            setTimeout(function() {
+                    _this.isPlayLock = !1
+                }
+                , _op.speed);
+            var j = _this.current * _mainWidth;
+
+            _this.content.stop(!0).animate({
+                left: -j
+            }, _op.speed)
+        }
     };
 
 
@@ -345,13 +391,13 @@
     Switchable.prototype.page = function () {
         var _this = this, _op = _this.options, $prevClass = _this.el.find("." + _op.prevClass), $nextClass = _this.el.find("." + _op.nextClass);
         $prevClass.on("click", function (e) {
-                _op.isPlayLock && _this.content && _this.content.length > 0 || (_op.isPlayLock = !0,
+            _this.isPlayLock && _this.content && _this.content.length > 0 || (_this.isPlayLock = !0,
                     _this.prev(),
                     e.stopPropagation())
             }
         );
         $nextClass.on("click", function (e) {
-                _op.isPlayLock && _this.content && _this.content.length > 0 || (_op.isPlayLock = !0,
+            _this.isPlayLock && _this.content && _this.content.length > 0 || (_this.isPlayLock = !0,
                     _this.next(),
                     e.stopPropagation())
             }
@@ -359,6 +405,7 @@
     };
 
     Switchable.prototype.next = function () {
+        console.log( this.current)
         var _this = this,
             _op = _this.options;
         _this.current = _this.current + _op.step,
@@ -387,6 +434,7 @@
         $.isFunction(_op.onNext) && _op.onNext.call(_this)
     };
     Switchable.prototype.prev = function () {
+        console.log( this.current)
         var _this = this,
             _op = _this.options;
         _op.seamlessLoop ? _this.offsetIndex(!0): ( _this.current -= _op.step,
