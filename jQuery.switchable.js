@@ -110,8 +110,8 @@
         seamlessLoop: !1, //无缝循环
         visible: 1,     // 显示 的个数 { 针对 slider}
         easing: "swing",
-        hasLoop: !1,
-        counter: 1, // 索引 计数器 [ false]
+        //hasLoop: !1,
+        //counter: 1, // 索引 计数器 [ false]
         hasSetup:!1, //是否允许
         hasArrow: !1,
         arrowClass:"ui-switchable-arrow",
