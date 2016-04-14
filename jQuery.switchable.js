@@ -336,7 +336,9 @@
                 top: -_t
             }, _op.speed, _op.easing))
     };
-    Switchable.prototype.carousel = function () {};
+    Switchable.prototype.imgscroll = function (i) {
+
+    };
 
 
     //事件
