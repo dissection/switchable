@@ -343,12 +343,12 @@
             }, _op.speed, _op.easing))
     };
     Switchable.prototype.imgscroll = function (i) {
-        console.log(i)
+
         var _this = this;
         var _op = _this.options;
         var _mainWidth = _this.mainWidth;
         var $imgscrollClass = _this.el.find("." + _op.imgscrollClass);
-        console.log(_this.isInit)
+        //console.log(_this.isInit)
         if (_this.isInit) {
                 _this.content.css({
                     position: "absolute",
@@ -405,7 +405,7 @@
     };
 
     Switchable.prototype.next = function () {
-        console.log( this.current)
+        //console.log( this.current)
         var _this = this,
             _op = _this.options;
         _this.current = _this.current + _op.step,
@@ -434,7 +434,7 @@
         $.isFunction(_op.onNext) && _op.onNext.call(_this)
     };
     Switchable.prototype.prev = function () {
-        console.log( this.current)
+        //console.log( this.current)
         var _this = this,
             _op = _this.options;
         _op.seamlessLoop ? _this.offsetIndex(!0): ( _this.current -= _op.step,
