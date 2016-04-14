@@ -3,10 +3,10 @@ switchable document
 options
 ----------------------
 ### 元素参数：
-**contentClass** [`string`]
-    *包裹面板元素： 
-   [`default`] "ui-switchable-panel-main"
-   [`mainClass`] 元素的父级
+**contentClass** [`string`]  
+    *包裹面板元素：   
+   [`default`] "ui-switchable-panel-main"  
+   [`mainClass`] 元素的父级  
         
 **mainClass** [`string`]
     面板元素：
