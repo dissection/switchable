@@ -142,3 +142,8 @@ options
 
 **onPrev** [`function`]  
     上一页执行完的回调函数  
+    
+## 版本
+1.0.0
+[`注`] ./src 文件下 是通用 压缩  
+        ./wksrc 文件下是 webpack 压缩模式
