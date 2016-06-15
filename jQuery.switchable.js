@@ -313,8 +313,7 @@
             _t =  _mainHeight * i;
 
         _this.isInit ? ("left" == _op.direction ? (_this.main.css({
-            "float": "left",
-            width:_mainWidth
+            "float": "left"
         }),$content.css(_op.seamlessLoop ? {
             width: _mainWidth * (_this.len + 2 * _this.cloneCount)
         } : {

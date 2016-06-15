@@ -190,13 +190,30 @@
         <div class="tab-panel green">4</div>
     </div>
 </div>
+<div class="tab-demo-01 mb20">
+    <div class="tab-extra">
+        <ul class="tab-nav clearfix">
+            <li class="tab-item">1</li>
+            <li class="tab-item" data-iframe = "iframe/tab_iframe_02.html" >2</li>
+            <li class="tab-item" data-iframe = "iframe/tab_iframe_03.html" >3</li>
+            <li class="tab-item" data-iframe = "iframe/tab_iframe_04.html" >4</li>
+
+        </ul>
+    </div>
+
+    <div class="tab-main">
+        <div class="tab-panel red">1</div>
+        <div class="tab-panel blue">2</div>
+        <div class="tab-panel orange">3</div>
+        <div class="tab-panel green">4</div>
+    </div>
+</div>
 <script>
     $(".tab-demo-01").switchable({
         type:"tab",
         defaultPanel:0,
 //        isAutoPlay:!0,
         event:"click",
-        counter:!1, // 索引 计数器 [ false]
         contentClass:"tab-main",
         mainClass:"tab-panel",
         navItem:"tab-item",
